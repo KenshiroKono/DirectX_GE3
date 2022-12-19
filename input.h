@@ -4,6 +4,7 @@
 #include <wrl.h>
 #define DIRECTINPUT_VERSION     0x0800   // DirectInputのバージョン指定
 #include <dinput.h>
+#include "WinApp.h"
 
 
 
@@ -19,7 +20,7 @@ public: // メンバ関数
 	/// <summary>
 	/// 初期化
 	/// </summary>
-	void Initialize(HINSTANCE hInstance, HWND hwnd);
+	void Initialize(WinApp* winApp);
 
 	/// <summary>
 	/// 毎フレーム処理
@@ -46,5 +47,8 @@ private:
 	ComPtr<IDirectInputDevice8> keyboard;
 	BYTE key[256] = {};
 	BYTE keyPre[256] = {};
+	//winapp
+	WinApp* winApp_ = nullptr;
+
 };
 
