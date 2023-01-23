@@ -1,7 +1,5 @@
 #include "WinApp.h"
 
-
-
 // ウィンドウプロシージャ
 LRESULT WinApp::WindowProc(HWND hwnd, UINT msg, WPARAM wparam, LPARAM lparam) {
     // メッセージ応じてゲーム固有の処理を行う
